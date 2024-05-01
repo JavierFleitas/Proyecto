@@ -1,0 +1,82 @@
+body{
+    height: 100vh;
+    width: 100%;
+    
+}
+
+
+.cabeza{
+    
+    min-height: 12%;
+    background-color: rgb(43, 137, 180);
+   
+}
+
+
+
+.cuerpo{
+    min-height: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    
+
+}
+
+
+.pie{
+min-height: 40%;
+background-color: rgb(12, 57, 80);
+}
+
+
+.stylenlace{
+    text-decoration: none;
+    color: black;
+}
+
+.stylenlace:hover{
+   
+    color: black;
+}
+
+.stylenlaceindex:hover{
+    
+    color: rgb(43, 137, 180);;
+}
+
+
+.stylepie{
+    text-decoration: none;
+}
+
+
+.b{
+    border: solid 2px black;
+    border-radius: 20px;
+
+}
+
+
+.caja{
+
+    display:flex;
+    justify-content: center;
+
+}
+
+.noproduc{
+    background-color: yellow;
+}
+
+
+p {
+    text-align: justify;
+}
+
+h5 {
+    text-align: justify;
+}
+
+

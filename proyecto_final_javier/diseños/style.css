@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+*{
+
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+
+.divgraficas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+    background-size: cover;
+    background-position: center;
+    font-family:'Roboto',sans-serif;
+
+   
+}
+
+
+.navegation a{
+    position: relative;
+    font-size: 1.1em;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+
+.navegation a.nav-link::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+    transform-origin: right;
+    
+}
+
+.nav-link:hover{
+color: white;
+}
+
+.navegation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navegation .btnLogin{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid black;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: black;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navegation .btnLogin:hover{
+
+    background-color: white;
+    color: black;
+
+}
+
+.wrapper{
+    position: fixed;
+    width: 400px;
+    height: 440px;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: .5s ease, .2s ease;
+    backdrop-filter: blur(20px);
+    background-image: url(../img/img1.jpg);
+    background-repeat: no-repeat;
+    
+    background-position-x:right ;
+    background-position-y:top ;
+    background-size: 650px;
+    
+}
+
+.wrapper.active-popup{
+    transform: scale(1);
+}
+
+.conthov.removeconthov{
+    transform: scale(0);
+}
+
+.divcarrito.removedivcarrito{
+    transform: scale(0);
+}
+
+.divcontacto.removedivcontacto{
+    transform: scale(0);
+}
+
+.divgraficas.removedivgraficas{
+    transform: scale(0);
+}
+
+.divplacas.removedivplacas{
+    transform: scale(0);
+}
+
+.divprocesadores.removedivprocesadores{
+    transform: scale(0);
+}
+
+.divram.removedivram{
+    transform: scale(0);
+}
+
+.wrapper.active{
+    height: 520px;
+}
+
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .form-box.login{
+    transition: .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.register{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register{
+    transition: .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: black;
+    font-size: 2em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+
+}
+
+.form-box h2{
+    font-size: 2em;
+    color: black;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid black;
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: -10%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: black;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.input-box input:focus~label, .input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: black;
+    font-weight: bold;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: black;
+    line-height: 57px;
+}
+
+.remember-forgot{
+    font-size: .9em;
+    color: black;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.remember-forgot label input{
+    accent-color: black;
+    margin-right: 3px;
+    
+}
+
+.remember-forgot a{
+    color: black;
+    text-decoration: none;
+    
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.btnn{
+    width: 100%;
+    height: 45px;
+    background-color: black;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+}
+
+.login-register{
+    font-size: .9em;
+    color: black;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.login-register p a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-register p a:hover{
+    text-decoration: underline;
+}
+
+.tituh{
+    font-size: 40px;
+    color: black;
+    font-family: 'Nerko One', cursive;
+    
+
+}
+
+
+.conthov{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+
+    
+    
+}
+
+.conthov .card{
+    width: 34vh;
+    height: 50vh;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    overflow: hidden;
+    margin: 4vh;
+    text-align: center;
+    transition: all 0.25s;
+    background: #ffffff;
+    
+}
+
+.conthov .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+}
+
+.conthov .card img{
+    width: 330px;
+    height: 220px;
+}
+
+.conhov .card h4{
+    font-weight: 600;
+}
+
+.conthov .card p{
+    padding: 0 1rem;
+    margin: 15px;
+    font-size: 16px;
+    font-weight: 300;
+    font-family:'Roboto',sans-serif;
+}
+
+.conhov .card a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+}
+
+.errorusurio{
+    margin-left: 70px;
+}
+
+.errorcorreo{
+    margin-left: 70px;
+}
+
+.errorclave{
+    margin-left: 100px;
+}
+
+#idnavbar{
+
+    margin-top: 0;
+    transition: 0.5s;
+
+}
+
+.errorcorre{
+    margin-left: 65px;
+}
+
+.errorclav{
+    margin-left: 105px;
+}
+
+
+.error-message {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+    padding: .75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+
+.success-message {
+    background-color: #77FFA8;
+    border-color: #f5c6cb;
+    color: #3AAF0E;
+    padding: .75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
